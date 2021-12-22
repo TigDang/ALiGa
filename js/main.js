@@ -14,7 +14,8 @@ function onDragOver(event) {
 }
 
 function removeDropzone(dropzone){
-  dropzone.remove();
+  dropzone.style.animationName='fadeOut';
+  setTimeout(function (){dropzone.remove()}, 900);
 }
 
 function onDrop(event) {
@@ -82,5 +83,6 @@ function countScore(){
 
 countScore();
 
-createNewPairs = setInterval(makePair, 4000);
-
+makePair();
+makePair();
+createNewPairs = setInterval(makePair, 3000);
